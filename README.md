@@ -16,12 +16,15 @@ API Documentation
 Example Usage for Unnamed.exchange API
 -------------
 
-```python
+```python3
 import UnnamedAPI
 
 api_key = "<my_api_key>"
 api_secret = "<my_api_secret>"
 API = UnnamedAPI.UnnamedAPI(api_key, api_secret)
+
+# https://github.com/digitalmoneybits2/unnamed-exchange-python
+# https://www.digitalmoneybits.org/
 
 # # PublicAPI
 print(API.get_ping())
