@@ -26,15 +26,12 @@ class UnnamedX(object):
         Sign = self.hmac_sign(params, self._secret)
         headers = {'apikey': self._api_key, 'signature': Sign}
         r = requests.post(reqUrl, data=params, headers=headers)
-        if '<Response [200]>' not in str(r):
-            print(r)
-        elif r.json():
+        if '<Response [200]>' in str(r):
             if type(r.json()) == dict and r.json().get('error'):
                 print(' Error message: {}'.format(r.json()['error']))
-            return r.json()
-        if r.text:
-            return r.text
-        return None
+            else:
+                return r.json()
+        return False
 
     @staticmethod
     def get_nonce():
