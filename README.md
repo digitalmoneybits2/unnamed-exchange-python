@@ -1,6 +1,10 @@
 # unnamed-exchange-python
 Python3 bindings for unnamed.exchange
 
+https://www.digitalmoneybits.org/
+
+https://github.com/digitalmoneybits2/unnamed-exchange-python
+
 
 API Documentation
 -------------
