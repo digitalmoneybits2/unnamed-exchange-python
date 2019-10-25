@@ -1,5 +1,5 @@
 # unnamed-exchange-python
-Python bindings for unnamed.exchange
+Python3 bindings for unnamed.exchange
 
 
 API Documentation
