@@ -4,6 +4,8 @@ import hashlib
 import requests
 from retrying import retry
 
+# https://github.com/digitalmoneybits2/unnamed-exchange-python
+# https://www.digitalmoneybits.org/
 
 class UnnamedX(object):
     def __init__(self):
