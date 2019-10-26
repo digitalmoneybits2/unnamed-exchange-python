@@ -28,7 +28,7 @@ class UnnamedX(object):
         r = requests.post(reqUrl, data=params, headers=headers)
         if r.status_code == requests.codes.ok:
             return r.json()
-        raise Exception("bad response")
+        raise Exception(str(r))
 
     @staticmethod
     def get_nonce():
