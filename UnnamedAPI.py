@@ -7,6 +7,7 @@ from retrying import retry
 # https://github.com/digitalmoneybits2/unnamed-exchange-python
 # https://www.digitalmoneybits.org/
 
+
 class UnnamedX(object):
     def __init__(self):
         self.BASE_URL = 'https://api.unnamed.exchange/v1/'
@@ -15,7 +16,6 @@ class UnnamedX(object):
     def get_data(self, urldir, params=''):
         params += 'nonce=' + self.get_nonce()
         reqUrl = self.BASE_URL + urldir + '?' + params
-        print(reqUrl)
         r = requests.get(reqUrl).json()
         return r if r else None
 
