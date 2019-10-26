@@ -26,12 +26,9 @@ class UnnamedX(object):
         Sign = self.hmac_sign(params, self._secret)
         headers = {'apikey': self._api_key, 'signature': Sign}
         r = requests.post(reqUrl, data=params, headers=headers)
-        if '<Response [200]>' in str(r):
-            if type(r.json()) == dict and r.json().get('error'):
-                print(' Error message: {}'.format(r.json()['error']))
-            else:
-                return r.json()
-        return False
+        if r.status_code == requests.codes.ok:
+            return r.json()
+        raise Exception("bad response")
 
     @staticmethod
     def get_nonce():
