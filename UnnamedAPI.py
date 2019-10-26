@@ -16,8 +16,9 @@ class UnnamedX(object):
     def get_data(self, urldir, params=''):
         params += 'nonce=' + self.get_nonce()
         reqUrl = self.BASE_URL + urldir + '?' + params
-        r = requests.get(reqUrl).json()
-        return r if r else None
+        r = requests.get(reqUrl)
+        if r.status_code == requests.codes.ok:
+            return r.json()
 
     @retry(stop_max_attempt_number=3)
     def post_data(self, urldir, params=''):
@@ -28,7 +29,6 @@ class UnnamedX(object):
         r = requests.post(reqUrl, data=params, headers=headers)
         if r.status_code == requests.codes.ok:
             return r.json()
-        raise Exception(str(r))
 
     @staticmethod
     def get_nonce():
