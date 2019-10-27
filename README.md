@@ -17,6 +17,7 @@ Example Usage for Unnamed.exchange API
 -------------
 
 ```python3
+#!/usr/bin/python3
 import UnnamedAPI
 
 api_key = "<my_api_key>"
