@@ -19,7 +19,6 @@ for PrivateAPI edit the lines:
 
 ```python3
 api_key = "<my_api_key>"
-
 api_secret = "<my_api_secret>"
 ```
 
