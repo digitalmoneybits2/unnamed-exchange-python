@@ -28,11 +28,11 @@ API = UnnamedAPI.UnnamedAPI(api_key, api_secret)
 # https://www.digitalmoneybits.org/
 
 # # PublicAPI
-print(API.get_ping())
+# print(API.get_ping())
 # print(API.get_time())
-# print(API.get_markets())
+print(API.get_markets())
 # print(API.get_currencies())
-# print(API.get_ticker('DMB_BTC'))
+print(API.get_ticker('DMB_BTC'))
 # print(API.get_24h_sum('DMB_BTC'))
 # print(API.get_order_book('DMB_BTC'))
 # print(API.get_history('DMB_BTC'))
