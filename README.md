@@ -15,7 +15,7 @@ API Documentation
 
 Example Usage for Unnamed.exchange API
 -------------
-first edit the lines:
+for PrivateAPI edit the lines:
 
 ```python3
 api_key = "<my_api_key>"
