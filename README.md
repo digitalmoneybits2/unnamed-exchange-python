@@ -15,17 +15,33 @@ API Documentation
 
 Example Usage for Unnamed.exchange API
 -------------
+first edit the lines:
+
+```python3
+api_key = "<my_api_key>"
+
+api_secret = "<my_api_secret>"
+```
+
+  with your api key and secret
+
+get your API key here:
+https://www.unnamed.exchange/UserSettings
+
 
 ```python3
 #!/usr/bin/python3
 import UnnamedAPI
 
+
 api_key = "<my_api_key>"
 api_secret = "<my_api_secret>"
-API = UnnamedAPI.UnnamedAPI(api_key, api_secret)
+
 
 # https://github.com/digitalmoneybits2/unnamed-exchange-python
 # https://www.digitalmoneybits.org/
+
+API = UnnamedAPI.UnnamedAPI(api_key, api_secret)
 
 # # PublicAPI
 # print(API.get_ping())
